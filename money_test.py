@@ -3,7 +3,7 @@ import dollar
 
 class MyTestCase(unittest.TestCase):
     def test_something(self):
-        five = dollar.Dollar()
+        five = dollar.Dollar(5)
         five.times(2)
         self.assertEqual(10, five.amount)
 
