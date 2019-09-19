@@ -1,17 +1,17 @@
 class Dollar:
-    amount = int()
+    _amount = int()
 
     def __init__(self, amount):
-        self.amount = amount
+        self._amount = amount
 
     def __eq__(self, other):
         if not isinstance(other, Dollar):
             return NotImplemented
-        return self.amount == other.amount
+        return self._amount == other._amount
 
     def times(self, multiplier):
-        return Dollar(self.amount * multiplier)
+        return Dollar(self._amount * multiplier)
 
     def equals(self, object):
         dollar = object
-        return self.amount == dollar.amount
+        return self._amount == dollar.amount
